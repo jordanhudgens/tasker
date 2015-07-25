@@ -11,7 +11,6 @@ class Task < ActiveRecord::Base
   end
 
   def update_percent_complete
-    puts "8" * 100
     project = Project.find(self.project_id)
     count_of_completed_tasks = project.tasks.completed.count
     count_of_total_tasks = project.tasks.count
