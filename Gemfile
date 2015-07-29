@@ -49,3 +49,5 @@ gem 'fog'
 gem 'figaro'
 gem 'unf'
 
+gem 'devise'
+
