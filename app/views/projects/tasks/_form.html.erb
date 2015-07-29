@@ -25,6 +25,11 @@
     <%= f.check_box :completed %>
   </div>
 
+  <div class="field">
+    <%= f.label :task_file %><br>
+    <%= f.file_field :task_file %>
+  </div>  
+
   <div class="actions">
     <%= f.submit %>
   </div>

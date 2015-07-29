@@ -15,5 +15,10 @@
   <%= @project.percent_complete %>
 </p>
 
+<% @project.tasks.each do |task| %>
+  <b>Title: </b><%= task.title %> <b>Description: </b><%= task.description %> <b>Completed: </b> <%= task.completed %> <%= link_to "File", task.task_file.to_s unless task.task_file.blank? %><hr>
+<% end %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Back', projects_path %> |
+<%= link_to 'New Task', new_project_task_path(@project) %>
